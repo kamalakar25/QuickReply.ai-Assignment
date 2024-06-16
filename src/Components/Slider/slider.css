@@ -1,0 +1,231 @@
+.slider-container {
+  background-color: rgb(243 244 246/1);
+  height: 0.5rem;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+  /* width: 100%; */
+}
+.slider {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  width: 100%;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  box-shadow: 0 0 10px #e6e6e6;
+  background-color: white;
+  border-radius: 100%;
+}
+.slider::-webkit-slider-thumb:hover,
+.slider-hover::-webkit-slider-thumb {
+  transition: background-color ease-in 400ms;
+  background-color: #edfaed;
+}
+.slider:focus::-webkit-slider-thumb,
+.slider-focus::-webkit-slider-thumb {
+  border: 2px solid #47b647;
+}
+.slider-size-32::-webkit-slider-thumb {
+  width: 2rem;
+  height: 2rem;
+}
+
+.thumb {
+  margin-left: 2px;
+  position: absolute;
+  z-index: 20;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.thumb::before {
+  position: absolute;
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  z-index: 40;
+  background-color: #47b647;
+  border-radius: 50%;
+}
+
+.thumb-size-32 {
+  width: 2rem;
+  height: 2rem;
+}
+.thumb-size-32::before {
+  width: 1rem;
+  height: 1rem;
+}
+.tooltip {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: -3rem;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  background-color: black;
+  color: white;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+.tooltip::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  transform: rotate(45deg);
+  bottom: -0.1rem;
+  border-radius: 2px;
+}
+.progress-bar {
+  position: absolute;
+  background-color: rgb(34 197 94 / 1);
+  height: 0.5rem;
+  border-radius: 4px;
+}
+/* range slider */
+
+.multi-thumb {
+  position: absolute;
+  pointer-events: none;
+}
+.multi-thumb::-webkit-slider-thumb {
+  pointer-events: all;
+}
+/* .left-thumb-container {
+  width: 100%;
+  height: 0.;
+  border: 1px solid red;
+  z-index: 200;
+} */
+/* .left-thumb {
+  margin-left: 2px;
+  position: absolute;
+  z-index: 20;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.left-thumb::before {
+  position: absolute;
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  z-index: 40;
+  background-color: #47b647;
+  border-radius: 50%;
+} */
+
+.thumb-zindex-3 {
+  z-index: 3;
+}
+.thumb-zindex-4 {
+  z-index: 4;
+}
+.thumb-zindex-5 {
+  z-index: 5;
+}
+.multi-slider-track {
+  position: absolute;
+  height: 0.5rem;
+  background-color: #47b647;
+  z-index: 2;
+  border-radius: 4px;
+  width: 100%;
+}
+.left-tooltip {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: -3rem;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  background-color: black;
+  color: white;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+.left-tooltip::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  transform: rotate(45deg);
+  bottom: -0.2rem;
+  border-radius: 2px;
+}
+.right-tooltip {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: -3rem;
+  /* right: 0; */
+  left: 40px;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  background-color: black;
+  color: white;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+.right-tooltip::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  transform: rotate(45deg);
+  bottom: -0.2rem;
+  border-radius: 2px;
+}
+/* discreteSlider */
+.discrete-slider {
+  position: absolute;
+  /* z-index: 40; */
+  border-radius: 4px;
+  height: 0.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  /* gap: 12px; */
+}
+.slider-dot {
+  position: absolute;
+  /* left: 70px; */
+  z-index: 40;
+  background-color: #47b647;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  pointer-events: none;
+}
+.slider-dot-white {
+  background-color: white;
+}
